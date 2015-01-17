@@ -72,7 +72,7 @@ goto nsis
 :rarCheck
 
 rem Check if project must be rared...
-if %~2==Rar goto rar
+if %~2r==Rarr goto rar
 
 del "bin\Release\%1-Portable.exe"
 ren "bin\Release\%1.exe" %1-Portable.exe
@@ -82,4 +82,6 @@ goto openOutputDir
 %~dp0RAR-%~1.bat
 
 :openOutputDir
+echo launching Explorer...
 explorer.exe "bin\Release"
+timeout /t 1
