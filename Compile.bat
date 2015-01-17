@@ -45,38 +45,41 @@ rem Run the MakeNSIS command
 echo.
 
 rem If it doesn't fail, go to next step
-if Not ERRORLEVEL==1 goto rar
+if Not ERRORLEVEL==1 goto rarCheck
 
 echo MakeNSIS command failed, trying again in 32-bit program files folder...
 "%ProgramFiles(x86)%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
 echo.
 
-if Not ERRORLEVEL==1 goto rar
+if Not ERRORLEVEL==1 goto rarCheck
 
 echo MakeNSIS-32 command failed, trying again in 64-bit program files folder...
 "%ProgramW6432%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
 echo.
 
-if Not ERRORLEVEL==1 goto rar
+if Not ERRORLEVEL==1 goto rarCheck
 
 color 0C
 echo MakeNSIS Commands Failed!
 echo Press enter to start installer...
 pause
+color 0A
 %~dp0NSIS-2.46-setup.exe
 echo Installer launched, press enter to retry MakeNSIS commands...
 pause
 goto nsis
 
-:rar
+:rarCheck
 
 rem Check if project must be rared...
-if not %~2==Rar goto openOutputDir
+if %~2==Rar goto rar
 
-rem use this if you want it to ask where to rar to
-rem "%ProgramFiles%\WinRAR\WinRAR.exe" a -ep1 -scul -r0 -iext --. %~dp0bin\Release\GitUpdater.exe %~dp0bin\Release\GitUpdater.bat %~dp0bin\Release\OpenRepoInPS.bat %~dp0bin\Release\PS
-"%ProgramFiles%\WinRAR\WinRAR.exe" a -ep1 -scul -r0 -iext -- %~dp0bin\Release\GitUpdater-Portable.rar %~dp0bin\Release\GitUpdater.exe %~dp0bin\Release\GitUpdater.bat %~dp0bin\Release\OpenRepoInBash.bat %~dp0bin\Release\OpenRepoInPS.bat %~dp0bin\Release\PS
+del "bin\Release\%1-Portable.exe"
+ren "bin\Release\%1.exe" %1-Portable.exe
+goto openOutputDir
+
+:rar
+%~dp0RAR-%~1.bat
 
 :openOutputDir
-
-explorer.exe "%~dp0..%~1\bin\Release"
+explorer.exe "bin\Release"
