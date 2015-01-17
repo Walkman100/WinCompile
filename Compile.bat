@@ -61,12 +61,22 @@ if Not ERRORLEVEL==1 goto rar
 
 color 0C
 echo MakeNSIS Commands Failed!
+echo Press enter to start installer...
 pause
-goto eof
+%~dp0NSIS-2.46-setup.exe
+echo Installer launched, press enter to retry MakeNSIS commands...
+pause
+goto nsis
 
 :rar
 
-rem Check if Logging must be enabled
-if %~5==True goto log
+rem Check if project must be rared...
+if not %~2==Rar goto openOutputDir
 
-explorer.exe "%~dp0..\Binaries"
+rem use this if you want it to ask where to rar to
+rem "%ProgramFiles%\WinRAR\WinRAR.exe" a -ep1 -scul -r0 -iext --. %~dp0bin\Release\GitUpdater.exe %~dp0bin\Release\GitUpdater.bat %~dp0bin\Release\OpenRepoInPS.bat %~dp0bin\Release\PS
+"%ProgramFiles%\WinRAR\WinRAR.exe" a -ep1 -scul -r0 -iext -- %~dp0bin\Release\GitUpdater-Portable.rar %~dp0bin\Release\GitUpdater.exe %~dp0bin\Release\GitUpdater.bat %~dp0bin\Release\OpenRepoInBash.bat %~dp0bin\Release\OpenRepoInPS.bat %~dp0bin\Release\PS
+
+:openOutputDir
+
+explorer.exe "%~dp0..%~1\bin\Release"
