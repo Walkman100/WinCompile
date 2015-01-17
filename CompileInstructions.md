@@ -10,7 +10,7 @@ Replace `{project name}` with the GitHub repo you want to compile.
 3. The script will automatically stop if one of the dependencies isn't found. The only dependency that the script won't give you an option to install is `MSBuild`.
 
 You can install `MSBuild` by doing one of the following:
-- (Recommended) Installing [Visual Studio 2013 Express for Windows Desktop](http://go.microsoft.com/?linkid=9832280&clcid=0x409) [[ISO](http://go.microsoft.com/?linkid=9832270&clcid=0x409)] [[All Downloads](http://www.visualstudio.com/en-us/downloads/download-visual-studio-vs#DownloadFamilies_2)]]
+- (Recommended) Installing [Visual Studio 2013 Express for Windows Desktop](http://go.microsoft.com/?linkid=9832280&clcid=0x409) [[ISO](http://go.microsoft.com/?linkid=9832270&clcid=0x409)] [[All Downloads](http://www.visualstudio.com/en-us/downloads/download-visual-studio-vs#DownloadFamilies_2)]
 - Extracting the contents of `MSBuild.zip` from this repo to `%ProgramFiles%\MSBuild`
 
 Project Compatibility:
