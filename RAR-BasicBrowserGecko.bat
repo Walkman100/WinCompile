@@ -39,4 +39,4 @@ echo RARing portable release with WinRAR done.
 rem Since it doesn't seem to return control, just run the code:
 echo launching Explorer...
 explorer.exe "bin\Release"
-timeout /t 10
+timeout /t 1

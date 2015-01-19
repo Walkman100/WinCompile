@@ -1,7 +1,6 @@
 @echo off
 
 rem %1 is project to compile
-rem if %2 is "Rar" then rar the output
 
 rem Remove "rem" from lines below to show all parameters when bat file launches
 rem echo Parameters: "%*"
@@ -72,7 +71,8 @@ goto nsis
 :rarCheck
 
 rem Check if project must be rared...
-if %~2r==Rarr goto rar
+if %~1==GitUpdater goto rar
+if %~1==BasicBrowserGecko goto rar
 
 del "bin\Release\%1-Portable.exe"
 ren "bin\Release\%1.exe" %1-Portable.exe
