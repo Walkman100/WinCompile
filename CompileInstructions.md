@@ -19,3 +19,4 @@ Project Compatibility:
 - [x] [CMDLauncher](https://github.com/Walkman100/CMDLauncher)
 - [x] [BasicBrowser](https://github.com/Walkman100/BasicBrowser)
 - [ ] [BasicBrowserGecko](https://github.com/Walkman-Mirror/BasicBrowserGecko)
+- [x] [InfoManager](https://github.com/Walkman100/InfoManager)
