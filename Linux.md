@@ -2,15 +2,15 @@ The installers will run and install on `Wine`, but you will have to use `mono` t
 
 ## Mono-Compatible programs:
 
-- [ ] [BasicBrowser](https://github.com/Walkman100/BasicBrowser) - [Error](#BasicBrowser) - [Download](https://github.com/Walkman100/BasicBrowser/releases/latest)
-- [x] [ClipboardManager](https://github.com/Walkman100/Clipboard-Projects/ClipboardManager) - [Download](https://github.com/Walkman100/Clipboard-Projects/ClipboardManager/releases/latest)
-- [x] [ClipboardSaver](https://github.com/Walkman100/Clipboard-Projects/ClipboardSaver) - [Download](https://github.com/Walkman100/Clipboard-Projects/ClipboardSaver/releases/latest)
+- [ ] [BasicBrowser](https://github.com/Walkman100/BasicBrowser) - [Download](https://github.com/Walkman100/BasicBrowser/releases/latest) - [Error](#basicbrowser)
+- [x] [ClipboardManager](https://github.com/Walkman100/Clipboard-Projects/tree/master/ClipboardManager) - [Download](https://github.com/Walkman100/Clipboard-Projects/releases)
+- [x] [ClipboardSaver](https://github.com/Walkman100/Clipboard-Projects/tree/master/ClipboardSaver) - [Download](https://github.com/Walkman100/Clipboard-Projects/releases)
 - [x] [CMDLauncher](https://github.com/Walkman100/CMDLauncher) - [Download](https://github.com/Walkman100/CMDLauncher/releases/latest)
-- [ ] [Dashy](https://github.com/Walkman100/Dashy) - [Error](#Dashy) - [Download](https://github.com/Walkman100/Dashy/releases/latest)
-- [ ] [GitUpdater](https://github.com/Walkman100/GitUpdater) - [Error](#GitUpdater) - [Download](https://github.com/Walkman100/GitUpdater/releases/latest)
+- [ ] [Dashy](https://github.com/Walkman100/Dashy) - [Download](https://github.com/Walkman100/Dashy/releases/latest) - [Error](#dashy)
+- [ ] [GitUpdater](https://github.com/Walkman100/GitUpdater) - [Download](https://github.com/Walkman100/GitUpdater/releases/latest) - [Error](#gitupdater)
 - [x] [InfoManager](https://github.com/Walkman100/InfoManager) - [Download](https://github.com/Walkman100/InfoManager/releases/latest)
 - [x] [SteamPlaceholder](https://github.com/Walkman100/SteamPlaceholder) - [Download](https://github.com/Walkman100/SteamPlaceholder/releases/latest)
-- [ ] [YTVL](https://github.com/Walkman100/YTVL) - [Error](#YTVL) - [Download](https://github.com/Walkman100/YTVL/releases/latest)
+- [ ] [YTVL](https://github.com/Walkman100/YTVL) - [Download](https://github.com/Walkman100/YTVL/releases/latest) - [Error](#ytvl)
 
 ## Errors:
 
