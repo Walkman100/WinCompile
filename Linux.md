@@ -2,20 +2,104 @@ The installers will run and install on `Wine`, but you will have to use `mono` t
 
 ## Mono-Compatible programs:
 
-- [ ] GitUpdater
-- [x] SteamPlaceholder
-- [ ] YTVL
-- [x] InfoManager
-- [x] CMDLauncher
-- [x] ClipboardManager
-- [x] ClipboardSaver
-- [ ] BasicBrowser
-- [ ] Dashy
+- [ ] [BasicBrowser](https://github.com/Walkman100/BasicBrowser) - [Error](#BasicBrowser) - [Download](https://github.com/Walkman100/BasicBrowser/releases/latest)
+- [x] [ClipboardManager](https://github.com/Walkman100/Clipboard-Projects/ClipboardManager) - [Download](https://github.com/Walkman100/Clipboard-Projects/ClipboardManager/releases/latest)
+- [x] [ClipboardSaver](https://github.com/Walkman100/Clipboard-Projects/ClipboardSaver) - [Download](https://github.com/Walkman100/Clipboard-Projects/ClipboardSaver/releases/latest)
+- [x] [CMDLauncher](https://github.com/Walkman100/CMDLauncher) - [Download](https://github.com/Walkman100/CMDLauncher/releases/latest)
+- [ ] [Dashy](https://github.com/Walkman100/Dashy) - [Error](#Dashy) - [Download](https://github.com/Walkman100/Dashy/releases/latest)
+- [ ] [GitUpdater](https://github.com/Walkman100/GitUpdater) - [Error](#GitUpdater) - [Download](https://github.com/Walkman100/GitUpdater/releases/latest)
+- [x] [InfoManager](https://github.com/Walkman100/InfoManager) - [Download](https://github.com/Walkman100/InfoManager/releases/latest)
+- [x] [SteamPlaceholder](https://github.com/Walkman100/SteamPlaceholder) - [Download](https://github.com/Walkman100/SteamPlaceholder/releases/latest)
+- [ ] [YTVL](https://github.com/Walkman100/YTVL) - [Error](#YTVL) - [Download](https://github.com/Walkman100/YTVL/releases/latest)
 
 ## Errors:
 
+### BasicBrowser
+
+```
+Unhandled Exception:
+System.InvalidOperationException: WinForms_SeeInnerException ---> System.ArgumentOutOfRangeException: StartIndex can not be less than zero
+Parameter name: startIndex
+  at System.String.Remove (Int32 startIndex) [0x00000] in <filename unknown>:0 
+  at BasicBrowser.BasicBrowser.MenuStripViewOpacityCbx_TextChanged (System.Object sender, System.EventArgs e) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.ToolStripItem.OnTextChanged (System.EventArgs e) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.ToolStripItem.set_Text (System.String value) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.ToolStripControlHost.set_Text (System.String value) [0x00000] in <filename unknown>:0 
+  at BasicBrowser.BasicBrowser.InitializeComponent () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) BasicBrowser.BasicBrowser:InitializeComponent ()
+  at BasicBrowser.BasicBrowser..ctor () [0x00000] in <filename unknown>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoCMethod:InternalInvoke (System.Reflection.MonoCMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  --- End of inner exception stack trace ---
+  at BasicBrowser.My.MyProject+MyForms.Create__Instance__[BasicBrowser] (BasicBrowser.BasicBrowser Instance) [0x00000] in <filename unknown>:0 
+  at BasicBrowser.My.MyProject+MyForms.get_BasicBrowser () [0x00000] in <filename unknown>:0 
+  at BasicBrowser.My.MyApplication.OnCreateMainForm () [0x00000] in <filename unknown>:0 
+  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun () [0x00000] in <filename unknown>:0 
+  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0 
+  at BasicBrowser.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0 
+[ERROR] FATAL UNHANDLED EXCEPTION: System.InvalidOperationException: WinForms_SeeInnerException ---> System.ArgumentOutOfRangeException: StartIndex can not be less than zero
+Parameter name: startIndex
+  at System.String.Remove (Int32 startIndex) [0x00000] in <filename unknown>:0 
+  at BasicBrowser.BasicBrowser.MenuStripViewOpacityCbx_TextChanged (System.Object sender, System.EventArgs e) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.ToolStripItem.OnTextChanged (System.EventArgs e) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.ToolStripItem.set_Text (System.String value) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.ToolStripControlHost.set_Text (System.String value) [0x00000] in <filename unknown>:0 
+  at BasicBrowser.BasicBrowser.InitializeComponent () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) BasicBrowser.BasicBrowser:InitializeComponent ()
+  at BasicBrowser.BasicBrowser..ctor () [0x00000] in <filename unknown>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoCMethod:InternalInvoke (System.Reflection.MonoCMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  --- End of inner exception stack trace ---
+  at BasicBrowser.My.MyProject+MyForms.Create__Instance__[BasicBrowser] (BasicBrowser.BasicBrowser Instance) [0x00000] in <filename unknown>:0 
+  at BasicBrowser.My.MyProject+MyForms.get_BasicBrowser () [0x00000] in <filename unknown>:0 
+  at BasicBrowser.My.MyApplication.OnCreateMainForm () [0x00000] in <filename unknown>:0 
+  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun () [0x00000] in <filename unknown>:0 
+  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0 
+  at BasicBrowser.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0 
+```
+
+### Dashy
+
+- [ ] Will be fixed soon
+```
+Unhandled Exception:
+System.NotImplementedException: The requested feature is not implemented.
+  at Dashy.Dashy.TimerMonitorSlow_Tick (System.Object sender, System.EventArgs e) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.Timer.OnTick (System.EventArgs e) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.Timer.FireTick () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.Windows.Forms.Timer:FireTick ()
+  at System.Windows.Forms.XplatUIX11.CheckTimers (System.Collections.ArrayList timers, DateTime now) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue, Boolean allowIdle) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.XplatUIX11.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr handle, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.XplatUI.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr hWnd, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.Application.RunLoop (Boolean Modal, System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.Application.Run (System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.Application.Run (System.Windows.Forms.Form mainForm) [0x00000] in <filename unknown>:0 
+  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun () [0x00000] in <filename unknown>:0 
+  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0 
+  at Dashy.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0 
+[ERROR] FATAL UNHANDLED EXCEPTION: System.NotImplementedException: The requested feature is not implemented.
+  at Dashy.Dashy.TimerMonitorSlow_Tick (System.Object sender, System.EventArgs e) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.Timer.OnTick (System.EventArgs e) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.Timer.FireTick () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.Windows.Forms.Timer:FireTick ()
+  at System.Windows.Forms.XplatUIX11.CheckTimers (System.Collections.ArrayList timers, DateTime now) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue, Boolean allowIdle) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.XplatUIX11.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr handle, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.XplatUI.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr hWnd, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.Application.RunLoop (Boolean Modal, System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.Application.Run (System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.Application.Run (System.Windows.Forms.Form mainForm) [0x00000] in <filename unknown>:0 
+  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun () [0x00000] in <filename unknown>:0 
+  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0 
+  at Dashy.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0 
+```
+
 ### GitUpdater
 
+- [ ] Will be fixed soon
 ```
 Unhandled Exception:
 System.IO.FileNotFoundException: Could not load file or assembly 'PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies.
@@ -33,7 +117,6 @@ File name: 'PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyTo
   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0 
   at GitUpdater.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0 
 ```
-- [ ] Will be fixed soon.
 
 ### YTVL
 
@@ -92,86 +175,4 @@ System.InvalidOperationException: WinForms_SeeInnerException ---> System.Reflect
   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun () [0x00000] in <filename unknown>:0 
   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0 
   at YTVL.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0 
-```
-
-### BasicBrowser
-
-```
-Unhandled Exception:
-System.InvalidOperationException: WinForms_SeeInnerException ---> System.ArgumentOutOfRangeException: StartIndex can not be less than zero
-Parameter name: startIndex
-  at System.String.Remove (Int32 startIndex) [0x00000] in <filename unknown>:0 
-  at BasicBrowser.BasicBrowser.MenuStripViewOpacityCbx_TextChanged (System.Object sender, System.EventArgs e) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.ToolStripItem.OnTextChanged (System.EventArgs e) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.ToolStripItem.set_Text (System.String value) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.ToolStripControlHost.set_Text (System.String value) [0x00000] in <filename unknown>:0 
-  at BasicBrowser.BasicBrowser.InitializeComponent () [0x00000] in <filename unknown>:0 
-  at (wrapper remoting-invoke-with-check) BasicBrowser.BasicBrowser:InitializeComponent ()
-  at BasicBrowser.BasicBrowser..ctor () [0x00000] in <filename unknown>:0 
-  at (wrapper managed-to-native) System.Reflection.MonoCMethod:InternalInvoke (System.Reflection.MonoCMethod,object,object[],System.Exception&)
-  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00000] in <filename unknown>:0 
-  --- End of inner exception stack trace ---
-  at BasicBrowser.My.MyProject+MyForms.Create__Instance__[BasicBrowser] (BasicBrowser.BasicBrowser Instance) [0x00000] in <filename unknown>:0 
-  at BasicBrowser.My.MyProject+MyForms.get_BasicBrowser () [0x00000] in <filename unknown>:0 
-  at BasicBrowser.My.MyApplication.OnCreateMainForm () [0x00000] in <filename unknown>:0 
-  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun () [0x00000] in <filename unknown>:0 
-  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0 
-  at BasicBrowser.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0 
-[ERROR] FATAL UNHANDLED EXCEPTION: System.InvalidOperationException: WinForms_SeeInnerException ---> System.ArgumentOutOfRangeException: StartIndex can not be less than zero
-Parameter name: startIndex
-  at System.String.Remove (Int32 startIndex) [0x00000] in <filename unknown>:0 
-  at BasicBrowser.BasicBrowser.MenuStripViewOpacityCbx_TextChanged (System.Object sender, System.EventArgs e) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.ToolStripItem.OnTextChanged (System.EventArgs e) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.ToolStripItem.set_Text (System.String value) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.ToolStripControlHost.set_Text (System.String value) [0x00000] in <filename unknown>:0 
-  at BasicBrowser.BasicBrowser.InitializeComponent () [0x00000] in <filename unknown>:0 
-  at (wrapper remoting-invoke-with-check) BasicBrowser.BasicBrowser:InitializeComponent ()
-  at BasicBrowser.BasicBrowser..ctor () [0x00000] in <filename unknown>:0 
-  at (wrapper managed-to-native) System.Reflection.MonoCMethod:InternalInvoke (System.Reflection.MonoCMethod,object,object[],System.Exception&)
-  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00000] in <filename unknown>:0 
-  --- End of inner exception stack trace ---
-  at BasicBrowser.My.MyProject+MyForms.Create__Instance__[BasicBrowser] (BasicBrowser.BasicBrowser Instance) [0x00000] in <filename unknown>:0 
-  at BasicBrowser.My.MyProject+MyForms.get_BasicBrowser () [0x00000] in <filename unknown>:0 
-  at BasicBrowser.My.MyApplication.OnCreateMainForm () [0x00000] in <filename unknown>:0 
-  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun () [0x00000] in <filename unknown>:0 
-  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0 
-  at BasicBrowser.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0 
-```
-
-### Dashy
-
-```
-Unhandled Exception:
-System.NotImplementedException: The requested feature is not implemented.
-  at Dashy.Dashy.TimerMonitorSlow_Tick (System.Object sender, System.EventArgs e) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Timer.OnTick (System.EventArgs e) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Timer.FireTick () [0x00000] in <filename unknown>:0 
-  at (wrapper remoting-invoke-with-check) System.Windows.Forms.Timer:FireTick ()
-  at System.Windows.Forms.XplatUIX11.CheckTimers (System.Collections.ArrayList timers, DateTime now) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue, Boolean allowIdle) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUIX11.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr handle, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUI.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr hWnd, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Application.RunLoop (Boolean Modal, System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Application.Run (System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Application.Run (System.Windows.Forms.Form mainForm) [0x00000] in <filename unknown>:0 
-  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun () [0x00000] in <filename unknown>:0 
-  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0 
-  at Dashy.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0 
-[ERROR] FATAL UNHANDLED EXCEPTION: System.NotImplementedException: The requested feature is not implemented.
-  at Dashy.Dashy.TimerMonitorSlow_Tick (System.Object sender, System.EventArgs e) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Timer.OnTick (System.EventArgs e) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Timer.FireTick () [0x00000] in <filename unknown>:0 
-  at (wrapper remoting-invoke-with-check) System.Windows.Forms.Timer:FireTick ()
-  at System.Windows.Forms.XplatUIX11.CheckTimers (System.Collections.ArrayList timers, DateTime now) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue, Boolean allowIdle) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUIX11.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr handle, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUI.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr hWnd, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Application.RunLoop (Boolean Modal, System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Application.Run (System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Application.Run (System.Windows.Forms.Form mainForm) [0x00000] in <filename unknown>:0 
-  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun () [0x00000] in <filename unknown>:0 
-  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0 
-  at Dashy.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0 
 ```
