@@ -5,6 +5,7 @@ The installers will run and install on `Wine`, but you will have to use `mono` t
 - [ ] [BasicBrowser](https://github.com/Walkman100/BasicBrowser) - [Download](https://github.com/Walkman100/BasicBrowser/releases/latest) - [Error](#basicbrowser)
 - [x] [ClipboardManager](https://github.com/Walkman100/Clipboard-Projects/tree/master/ClipboardManager) - [Download](https://github.com/Walkman100/Clipboard-Projects/releases)
 - [x] [ClipboardSaver](https://github.com/Walkman100/Clipboard-Projects/tree/master/ClipboardSaver) - [Download](https://github.com/Walkman100/Clipboard-Projects/releases)
+- [x] [CredMan](https://github.com/Walkman100/Misc/releases/tag/CredMan) (Download link is on the linked page)
 - [x] [CMDLauncher](https://github.com/Walkman100/CMDLauncher) - [Download](https://github.com/Walkman100/CMDLauncher/releases/latest)
 - [ ] [Dashy](https://github.com/Walkman100/Dashy) - [Download](https://github.com/Walkman100/Dashy/releases/latest) - [Error](#dashy)
 - [ ] [GitUpdater](https://github.com/Walkman100/GitUpdater) - [Download](https://github.com/Walkman100/GitUpdater/releases/latest) - [Error](#gitupdater)
