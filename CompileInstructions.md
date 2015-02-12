@@ -26,18 +26,18 @@ Project Compatibility (Only planned ones are listed):
 
 If the above is too confusing, run these commands in CMD:
 
-```bat
+```cmd
 git clone https://github.com/Walkman100/WinCompile.git
 ```
 
 Replace `{project name}` with the GitHub repo you want to compile:
 
-```batch
+```cmd
 git clone https://github.com/Walkman100/{project name}.git
 ```
 ```cmd
 cd {project name}
 ```
-```bash
+```cmd
 compile
 ```

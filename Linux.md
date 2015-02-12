@@ -61,7 +61,7 @@ Parameter name: startIndex
 
 ### Dashy
 
-- [ ] Will be fixed soon
+- [ ] Fixed in source code, need to test in Linux & release
 ```
 Unhandled Exception:
 System.NotImplementedException: The requested feature is not implemented.
@@ -100,7 +100,7 @@ System.NotImplementedException: The requested feature is not implemented.
 
 ### GitUpdater
 
-- [ ] Will be fixed soon
+- [ ] Fixed in source code, need to test in Linux & release
 ```
 Unhandled Exception:
 System.IO.FileNotFoundException: Could not load file or assembly 'PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies.
