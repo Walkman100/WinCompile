@@ -3,14 +3,14 @@ The installers will run and install on `Wine`, but you will have to use `mono` t
 ## Mono-Compatible programs:
 
 - [ ] [BasicBrowser](https://github.com/Walkman100/BasicBrowser) - [Download](https://github.com/Walkman100/BasicBrowser/releases/latest) - [Error](#basicbrowser)
-- [x] [ClipboardManager](https://github.com/Walkman100/Clipboard-Projects/tree/master/ClipboardManager) - [Download](https://github.com/Walkman100/Clipboard-Projects/releases)
-- [x] [ClipboardSaver](https://github.com/Walkman100/Clipboard-Projects/tree/master/ClipboardSaver) - [Download](https://github.com/Walkman100/Clipboard-Projects/releases)
-- [x] [CredMan](https://github.com/Walkman100/Misc/releases/tag/CredMan) (Download link is on the linked page)
-- [x] [CMDLauncher](https://github.com/Walkman100/CMDLauncher) - [Download](https://github.com/Walkman100/CMDLauncher/releases/latest)
+- [x] [ClipboardManager](https://github.com/Walkman100/Clipboard-Projects/tree/master/ClipboardManager) - [Download](https://github.com/Walkman100/Clipboard-Projects/releases) - [Screenshot](http://walkman100.github.io/Walkman/Images/WindowsProjectsScreenshots/ClipboardProjects/ManagerLinuxMono.png), [with an item selected](http://walkman100.github.io/Walkman/Images/WindowsProjectsScreenshots/ClipboardProjects/ManagerLinuxMonoItemSelected.png)
+- [x] [ClipboardSaver](https://github.com/Walkman100/Clipboard-Projects/tree/master/ClipboardSaver) - [Download](https://github.com/Walkman100/Clipboard-Projects/releases) - [Screenshot](http://walkman100.github.io/Walkman/Images/WindowsProjectsScreenshots/ClipboardProjects/SaverLinuxMono.png)
+- [x] [CredMan](https://github.com/Walkman100/Misc/releases/tag/CredMan) (Download link is on the linked page) <!-- - [Screenshot](http://walkman100.github.io/Walkman/Images/WindowsProjectsScreenshots/GitUpdater/CredManLinuxMono.png) -->
+- [x] [CMDLauncher](https://github.com/Walkman100/CMDLauncher) - [Download](https://github.com/Walkman100/CMDLauncher/releases/latest) - [Screenshot](http://walkman100.github.io/Walkman/Images/WindowsProjectsScreenshots/CMDLauncher/LinuxMono.png)
 - [ ] [Dashy](https://github.com/Walkman100/Dashy) - [Download](https://github.com/Walkman100/Dashy/releases/latest) - [Error](#dashy)
 - [ ] [GitUpdater](https://github.com/Walkman100/GitUpdater) - [Download](https://github.com/Walkman100/GitUpdater/releases/latest) - [Error](#gitupdater)
-- [x] [InfoManager](https://github.com/Walkman100/InfoManager) - [Download](https://github.com/Walkman100/InfoManager/releases/latest)
-- [x] [SteamPlaceholder](https://github.com/Walkman100/SteamPlaceholder) - [Download](https://github.com/Walkman100/SteamPlaceholder/releases/latest)
+- [x] [InfoManager](https://github.com/Walkman100/InfoManager) - [Download](https://github.com/Walkman100/InfoManager/releases/latest) - [Screenshot](http://walkman100.github.io/Walkman/Images/WindowsProjectsScreenshots/InfoManager/LinuxMono.png)
+- [x] [SteamPlaceholder](https://github.com/Walkman100/SteamPlaceholder) - [Download](https://github.com/Walkman100/SteamPlaceholder/releases/latest) - [Screenshot](http://walkman100.github.io/Walkman/Images/WindowsProjectsScreenshots/SteamPlaceholder/LinuxMono.png)
 - [ ] [YTVL](https://github.com/Walkman100/YTVL) - [Download](https://github.com/Walkman100/YTVL/releases/latest) - [Error](#ytvl)
 
 ## Errors:
