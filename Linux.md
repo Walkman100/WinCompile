@@ -96,8 +96,9 @@ System.NotImplementedException: The requested feature is not implemented.
 ```
 
 ### GitUpdater
-- [x] Fixed in source code
+
 #### First error: (fixed)
+- [x] Fixed in source code
 ```
 Unhandled Exception:
 System.IO.FileNotFoundException: Could not load file or assembly 'PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies.
@@ -115,8 +116,9 @@ File name: 'PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyTo
   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0 
   at GitUpdater.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0 
 ```
-- [ ] Fixed in source code, need to test in Linux & release
+
 #### Second error:
+- [ ] Fixed in source code, need to test in Linux & release
 ```
 libpng warning: Incorrect bKGD chunk length
 System.IO.DirectoryNotFoundException: Directory '\Documents\GitHub\' not found.
