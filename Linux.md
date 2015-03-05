@@ -1,7 +1,6 @@
 The installers will run and install on `Wine`, but you will have to use `mono` to run the programs themselves.
 
 ## Mono-Compatible programs:
-
 - [ ] [BasicBrowser](https://github.com/Walkman100/BasicBrowser) - [Download](https://github.com/Walkman100/BasicBrowser/releases/latest) - [Error](#basicbrowser)
 - [x] [ClipboardManager](https://github.com/Walkman100/Clipboard-Projects/tree/master/ClipboardManager) - [Download](https://github.com/Walkman100/Clipboard-Projects/releases) - [Screenshot](http://walkman100.github.io/Walkman/Images/WindowsProjectsScreenshots/ClipboardProjects/ManagerLinuxMono.png), [with an item selected](http://walkman100.github.io/Walkman/Images/WindowsProjectsScreenshots/ClipboardProjects/ManagerLinuxMonoItemSelected.png)
 - [x] [ClipboardSaver](https://github.com/Walkman100/Clipboard-Projects/tree/master/ClipboardSaver) - [Download](https://github.com/Walkman100/Clipboard-Projects/releases) - [Screenshot](http://walkman100.github.io/Walkman/Images/WindowsProjectsScreenshots/ClipboardProjects/SaverLinuxMono.png)
@@ -14,9 +13,8 @@ The installers will run and install on `Wine`, but you will have to use `mono` t
 - [ ] [YTVL](https://github.com/Walkman100/YTVL) - [Download](https://github.com/Walkman100/YTVL/releases/latest) - [Error](#ytvl)
 
 ## Errors:
-
 ### BasicBrowser
-
+- [ ] Fixed in source code, need to test in Linux & release
 ```
 Unhandled Exception:
 System.InvalidOperationException: WinForms_SeeInnerException ---> System.ArgumentOutOfRangeException: StartIndex can not be less than zero
@@ -60,47 +58,46 @@ Parameter name: startIndex
 ```
 
 ### Dashy
-
-- [ ] Fixed in source code, need to test in Linux & release
+- [ ] Should be easy to fix
 ```
 Unhandled Exception:
 System.NotImplementedException: The requested feature is not implemented.
-  at Dashy.Dashy.TimerMonitorSlow_Tick (System.Object sender, System.EventArgs e) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Timer.OnTick (System.EventArgs e) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Timer.FireTick () [0x00000] in <filename unknown>:0 
+  at Dashy.Dashy.TimerMonitorSlow_Tick (System.Object sender, System.EventArgs e) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.Timer.OnTick (System.EventArgs e) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.Timer.FireTick () [0x00000] in <filename unknown>:0
   at (wrapper remoting-invoke-with-check) System.Windows.Forms.Timer:FireTick ()
-  at System.Windows.Forms.XplatUIX11.CheckTimers (System.Collections.ArrayList timers, DateTime now) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue, Boolean allowIdle) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUIX11.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr handle, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUI.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr hWnd, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Application.RunLoop (Boolean Modal, System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Application.Run (System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Application.Run (System.Windows.Forms.Form mainForm) [0x00000] in <filename unknown>:0 
-  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun () [0x00000] in <filename unknown>:0 
-  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0 
-  at Dashy.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.XplatUIX11.CheckTimers (System.Collections.ArrayList timers, DateTime now) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue, Boolean allowIdle) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.XplatUIX11.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr handle, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.XplatUI.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr hWnd, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.Application.RunLoop (Boolean Modal, System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.Application.Run (System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.Application.Run (System.Windows.Forms.Form mainForm) [0x00000] in <filename unknown>:0
+  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun () [0x00000] in <filename unknown>:0
+  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0
+  at Dashy.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0
 [ERROR] FATAL UNHANDLED EXCEPTION: System.NotImplementedException: The requested feature is not implemented.
-  at Dashy.Dashy.TimerMonitorSlow_Tick (System.Object sender, System.EventArgs e) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Timer.OnTick (System.EventArgs e) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Timer.FireTick () [0x00000] in <filename unknown>:0 
+  at Dashy.Dashy.TimerMonitorSlow_Tick (System.Object sender, System.EventArgs e) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.Timer.OnTick (System.EventArgs e) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.Timer.FireTick () [0x00000] in <filename unknown>:0
   at (wrapper remoting-invoke-with-check) System.Windows.Forms.Timer:FireTick ()
-  at System.Windows.Forms.XplatUIX11.CheckTimers (System.Collections.ArrayList timers, DateTime now) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue, Boolean allowIdle) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUIX11.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr handle, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.XplatUI.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr hWnd, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Application.RunLoop (Boolean Modal, System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Application.Run (System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0 
-  at System.Windows.Forms.Application.Run (System.Windows.Forms.Form mainForm) [0x00000] in <filename unknown>:0 
-  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun () [0x00000] in <filename unknown>:0 
-  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0 
-  at Dashy.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0 
+  at System.Windows.Forms.XplatUIX11.CheckTimers (System.Collections.ArrayList timers, DateTime now) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue, Boolean allowIdle) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.XplatUIX11.UpdateMessageQueue (System.Windows.Forms.XEventQueue queue) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.XplatUIX11.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr handle, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.XplatUI.GetMessage (System.Object queue_id, System.Windows.Forms.MSG& msg, IntPtr hWnd, Int32 wFilterMin, Int32 wFilterMax) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.Application.RunLoop (Boolean Modal, System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.Application.Run (System.Windows.Forms.ApplicationContext context) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.Application.Run (System.Windows.Forms.Form mainForm) [0x00000] in <filename unknown>:0
+  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun () [0x00000] in <filename unknown>:0
+  at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0
+  at Dashy.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0
 ```
 
 ### GitUpdater
-
-- [ ] Fixed in source code, need to test in Linux & release
+- [x] Fixed in source code
+#### First error: (fixed)
 ```
 Unhandled Exception:
 System.IO.FileNotFoundException: Could not load file or assembly 'PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies.
@@ -118,9 +115,23 @@ File name: 'PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyTo
   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run (System.String[] commandLine) [0x00000] in <filename unknown>:0 
   at GitUpdater.My.MyApplication.Main (System.String[] Args) [0x00000] in <filename unknown>:0 
 ```
+- [ ] Fixed in source code, need to test in Linux & release
+#### Second error:
+```
+libpng warning: Incorrect bKGD chunk length
+System.IO.DirectoryNotFoundException: Directory '\Documents\GitHub\' not found.
+  at System.IO.Directory.ValidateDirectoryListing (System.String path, System.String searchPattern, System.Boolean& stop) [0x00000] in <filename unknown>:0
+  at System.IO.Directory.GetFileSystemEntries (System.String path, System.String searchPattern, FileAttributes mask, FileAttributes attrs) [0x00000] in <filename unknown>:0
+  at System.IO.Directory.GetDirectories (System.String path, System.String searchPattern) [0x00000] in <filename unknown>:0
+  at System.IO.Directory.GetDirectories (System.String path) [0x00000] in <filename unknown>:0
+  at GitUpdater.GitUpdater.RebuildRepoList () [0x00000] in <filename unknown>:0
+  at (wrapper remoting-invoke-with-check) GitUpdater.GitUpdater:RebuildRepoList ()
+  at GitUpdater.GitUpdater.LoadGitUpdater (System.Object sender, System.EventArgs e) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.Form.OnLoad (System.EventArgs e) [0x00000] in <filename unknown>:0
+  at System.Windows.Forms.Form.OnLoadInternal (System.EventArgs e) [0x00000] in <filename unknown>:0
+```
 
 ### YTVL
-
 ```
 libgluezilla not found. To have webbrowser support, you need libgluezilla installed
 libgluezilla not found. To have webbrowser support, you need libgluezilla installed
