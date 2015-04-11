@@ -23,3 +23,11 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <http://unlicense.org>
 
+All trademarks (listed below) are property of their respective owners in the US and other countries:
+- Linux
+- MSBuild
+- NSIS
+- Notepad++
+- Mono
+- SharpDevelop
+- WinRAR
