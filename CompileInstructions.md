@@ -18,8 +18,11 @@ Project Compatibility (Only planned ones are listed):
 - [x] [BasicBrowser](https://github.com/Walkman100/BasicBrowser)
 - [ ] [BasicBrowserGecko](https://github.com/Walkman-Mirror/BasicBrowserGecko)
 - [x] [CMDLauncher](https://github.com/Walkman100/CMDLauncher)
+- [x] [DirectoryImage](https://github.com/Walkman100/DirectoryImage)
+- [x] [FileBrowser](https://github.com/Walkman100/FileBrowser) (Both branches)
 - [x] [GitUpdater](https://github.com/Walkman100/GitUpdater)
 - [x] [InfoManager](https://github.com/Walkman100/InfoManager)
+- [x] [PortActions](https://github.com/Walkman100/PortActions)
 - [x] [YTVL](https://github.com/Walkman100/YTVL)
 
 # Command line
