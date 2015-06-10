@@ -45,19 +45,19 @@ rem Run the MakeNSIS command
 echo.
 
 rem If it doesn't fail, go to next step
-if Not ERRORLEVEL==1 goto rarCheck
+if Not ERRORLEVEL==1 goto AppCert
 
 echo MakeNSIS command failed, trying again in 32-bit program files folder...
 "%ProgramFiles(x86)%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
 echo.
 
-if Not ERRORLEVEL==1 goto rarCheck
+if Not ERRORLEVEL==1 goto AppCert
 
 echo MakeNSIS-32 command failed, trying again in 64-bit program files folder...
 "%ProgramW6432%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
 echo.
 
-if Not ERRORLEVEL==1 goto rarCheck
+if Not ERRORLEVEL==1 goto AppCert
 
 color 0C
 echo MakeNSIS Commands Failed!
@@ -68,6 +68,19 @@ color %defaultColor%
 echo Installer launched, press enter to retry MakeNSIS commands...
 pause
 goto nsis
+
+:AppCert
+
+echo Certifying installer...
+"%ProgramFiles%\Windows Kits\8.1\App Certification Kit\appcert.exe" test -setuppath "%~dp0..\%~1\bin\Release\%~1-Installer.exe" -reportoutputpath "%~dp0..\%~1\bin\Release\appcertreport.xml"
+
+if Not ERRORLEVEL==1 goto rarCheck
+
+color 0C
+echo Installer Certification failed!
+echo Press enter to continue...
+pause
+color %defaultColor%
 
 :rarCheck
 
