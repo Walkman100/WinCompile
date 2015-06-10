@@ -5,7 +5,7 @@ Replace `{project name}` with the GitHub repo you want to compile.
 
 2. Run one of the following:
   - `compile` from the {project name} folder
-  - `..\WinCompile\compile {project name}` from the {project name} folder
+  - `..\compile {project name}` from the {project name} folder
   - `compile {project name}` from the `WinCompile` folder
 
 3. The script will automatically stop if one of the dependencies isn't found. The only dependency that the script won't give you an option to run it's installer is `MSBuild`.
@@ -31,16 +31,11 @@ If the above is too confusing, run these commands in CMD:
 
 ```cmd
 git clone https://github.com/Walkman100/WinCompile.git
+cd WinCompile
 ```
 
 Replace `{project name}` with the GitHub repo you want to compile:
 
 ```cmd
-git clone https://github.com/Walkman100/{project name}.git
-```
-```cmd
-cd {project name}
-```
-```cmd
-compile
+compile {project name}
 ```

@@ -10,7 +10,7 @@ rem Setting GUI elements and going to the project directory
     set defaultColor=0A
     color %defaultColor%
     title Compiling %~1...
-    cd ..\%~1
+    cd %~1
 
 echo Starting MSBuild compile for %~1...
     rem Run the MSBuild command
@@ -72,7 +72,7 @@ echo Starting MSBuild compile for %~1...
 :AppCert
 
     echo Certifying installer...
-        "%ProgramFiles%\Windows Kits\8.1\App Certification Kit\appcert.exe" test -setuppath "%~dp0..\%~1\bin\Release\%~1-Installer.exe" -reportoutputpath "%~dp0..\%~1\bin\Release\appcertreport.xml"
+        "%ProgramFiles%\Windows Kits\8.1\App Certification Kit\appcert.exe" test -setuppath "%~dp0%~1\bin\Release\%~1-Installer.exe" -reportoutputpath "%~dp0%~1\bin\Release\appcertreport.xml"
 
         if Not ERRORLEVEL==1 goto rarCheck
 
