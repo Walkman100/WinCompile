@@ -6,9 +6,12 @@ rem Remove "rem" from lines below to show all parameters when bat file launches
 rem echo Parameters: "%*"
 rem echo 1: %1 2: %2 3: %3 4: %4 5: %5 6: %6
 
-rem Setting GUI elements and going to the project directory
+rem Setting GUI elements, pulling code, and going to the project directory
     set defaultColor=0A
     color %defaultColor%
+    title Pulling %~1...
+        git submodule init
+        git submodule update --init %~1
     title Compiling %~1...
     cd %~1
 
