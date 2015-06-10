@@ -1,0 +1,24 @@
+[submodule "BasicBrowser"]
+	path = BasicBrowser
+	url = https://github.com/Walkman100/BasicBrowser.git
+[submodule "CMDLauncher"]
+	path = CMDLauncher
+	url = https://github.com/Walkman100/CMDLauncher
+[submodule "DirectoryImage"]
+	path = DirectoryImage
+	url = https://github.com/Walkman100/DirectoryImage
+[submodule "FileBrowser"]
+	path = FileBrowser
+	url = https://github.com/Walkman100/FileBrowser
+[submodule "GitUpdater"]
+	path = GitUpdater
+	url = https://github.com/Walkman100/GitUpdater
+[submodule "InfoManager"]
+	path = InfoManager
+	url = https://github.com/Walkman100/InfoManager
+[submodule "PortActions"]
+	path = PortActions
+	url = https://github.com/Walkman100/PortActions
+[submodule "YTVL"]
+	path = YTVL
+	url = https://github.com/Walkman100/YTVL
