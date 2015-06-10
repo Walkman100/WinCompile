@@ -7,7 +7,8 @@ rem echo Parameters: "%*"
 rem echo 1: %1 2: %2 3: %3 4: %4 5: %5 6: %6
 
 rem Setting GUI elements and going to the project directory
-color 0A
+set defaultColor=0A
+color %defaultColor%
 title Compiling %~1...
 cd ..\%~1
 
@@ -62,7 +63,7 @@ color 0C
 echo MakeNSIS Commands Failed!
 echo Press enter to start installer...
 pause
-color 0A
+color %defaultColor%
 %~dp0NSIS-2.46-setup.exe
 echo Installer launched, press enter to retry MakeNSIS commands...
 pause
@@ -70,7 +71,7 @@ goto nsis
 
 :rarCheck
 
-rem Check if project must be rared...
+rem Check if project must be rarred...
 if %~1==GitUpdater goto rar
 if %~1==BasicBrowserGecko goto rar
 
@@ -84,4 +85,4 @@ goto openOutputDir
 :openOutputDir
 echo launching Explorer...
 explorer.exe "bin\Release"
-timeout /t 1
+timeout /t 5
