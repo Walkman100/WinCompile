@@ -45,19 +45,19 @@ echo Starting MSBuild compile for %~1...
         echo.
 
     rem If it doesn't fail, go to next step
-        if Not ERRORLEVEL==1 goto AppCert
+        if Not ERRORLEVEL==1 goto rarCheck rem AppCert
 
     echo MakeNSIS command failed, trying again in 32-bit program files folder...
         "%ProgramFiles(x86)%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
         echo.
 
-        if Not ERRORLEVEL==1 goto AppCert
+        if Not ERRORLEVEL==1 goto rarCheck rem AppCert
 
     echo MakeNSIS-32 command failed, trying again in 64-bit program files folder...
         "%ProgramW6432%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
         echo.
 
-        if Not ERRORLEVEL==1 goto AppCert
+        if Not ERRORLEVEL==1 goto rarCheck rem AppCert
 
     color 0C
         echo MakeNSIS Commands Failed!
@@ -100,3 +100,4 @@ echo Starting MSBuild compile for %~1...
     echo launching Explorer...
         explorer.exe "bin\Release"
         timeout /t 5
+:EOF
