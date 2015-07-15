@@ -29,18 +29,9 @@ Project Compatibility (Only planned ones are listed):
 
 If the above is too confusing, run these commands in CMD:
 
-```cmd
-git clone https://github.com/Walkman100/WinCompile.git
-```
+- `git clone https://github.com/Walkman100/WinCompile.git`
 
 Replace `{project name}` with the GitHub repo you want to compile:
-
-```cmd
-git clone https://github.com/Walkman100/{project name}.git
-```
-```cmd
-cd {project name}
-```
-```cmd
-compile
-```
+- `git clone https://github.com/Walkman100/{project name}.git`
+- `cd {project name}`
+- `compile`
