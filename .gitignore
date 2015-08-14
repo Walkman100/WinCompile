@@ -149,8 +149,10 @@ ClientBin/
 *~
 *.dbmdl
 *.[Pp]ublish.xml
-*.pfx
 *.publishsettings
+# Certificates
+*.pfx
+*.pvk
 
 # RIA/Silverlight projects
 Generated_Code/
