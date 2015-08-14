@@ -12,36 +12,36 @@ rem Setting GUI elements and going to the project directory
     title Compiling %~1...
     cd ..\%~1
 
-echo Starting MSBuild compile for %~1...
+echo ==== Starting MSBuild compile for %~1... ====
     rem Run the MSBuild command
         "%ProgramFiles%\MSBuild\12.0\bin\msbuild.exe" /property:Configuration=Release "%~1.sln"
-        echo.
 
     rem If it doesn't fail, go to next step
         if Not ERRORLEVEL==1 goto nsis
 
     echo MSBuild command failed, trying again in 32-bit program files folder...
         "%ProgramFiles(x86)%\MSBuild\12.0\bin\msbuild.exe" /property:Configuration=Release "%~1.sln"
-        echo.
 
         if Not ERRORLEVEL==1 goto nsis
 
     echo MSBuild-32 command failed, trying again in 64-bit program files folder...
         "%ProgramW6432%\MSBuild\12.0\bin\msbuild.exe" /property:Configuration=Release "%~1.sln"
-        echo.
 
         if Not ERRORLEVEL==1 goto nsis
 
     color 0C
-        echo MSBuild Commands Failed!
+        echo ==== MSBuild Commands Failed! ====
         pause
         goto eof
 
 :nsis
 
-    echo Starting MakeNSIS Installer script for %~1...
+    echo ==== MSBuild Done ====
+    echo.
+    echo ==== Starting MakeNSIS Installer script for %~1 ====
     rem Run the MakeNSIS command
         "%ProgramFiles%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
+        echo ==== MakeNSIS Script done ====
         echo.
 
     rem If it doesn't fail, go to next step
@@ -49,18 +49,21 @@ echo Starting MSBuild compile for %~1...
 
     echo MakeNSIS command failed, trying again in 32-bit program files folder...
         "%ProgramFiles(x86)%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
+        echo ==== MakeNSIS Script done ====
         echo.
 
         if Not ERRORLEVEL==1 goto InstallerCert
 
     echo MakeNSIS-32 command failed, trying again in 64-bit program files folder...
         "%ProgramW6432%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
+        echo ==== MakeNSIS Script done ====
         echo.
 
         if Not ERRORLEVEL==1 goto InstallerCert
 
     color 0C
-        echo MakeNSIS Commands Failed!
+        echo ==== MakeNSIS Commands Failed ====
+        echo.
         echo Press enter to start installer...
         pause
         color %defaultColor%
@@ -72,19 +75,18 @@ echo Starting MSBuild compile for %~1...
 :InstallerCert
 
     rem because you can't use a PVK (private key) via command line -_-
-        echo %~dp0..\%~1\bin\Release\%~1-Installer.exe
+    echo ==== Starting Certificate signing process ====
         echo %~dp0WalkmanOSS.cer
         echo %~dp0WalkmanOSS.pvk
         echo https://github.com/Walkman100/%~1
         echo http://timestamp.verisign.com/scripts/timstamp.dll
-    "%ProgramFiles%\Microsoft SDKs\Windows\v6.0A\Bin\signtool.exe" signwizard
-        echo %~dp0..\%~1\bin\Release\%~1.exe
+        echo.
         echo %~dp0WalkmanOSS.cer
         echo %~dp0WalkmanOSS.pvk
         echo https://github.com/Walkman100/%~1
         echo http://timestamp.verisign.com/scripts/timstamp.dll
-    "%ProgramFiles%\Microsoft SDKs\Windows\v6.0A\Bin\signtool.exe" signwizard
-        
+    "%ProgramFiles%\Microsoft SDKs\Windows\v6.0A\Bin\signtool.exe" signwizard "%~dp0..\%~1\bin\Release\%~1-Installer.exe" "%~dp0..\%~1\bin\Release\%~1.exe"
+        echo ==== Certificate signing process done ====
         
     rem echo Certifying files...
         rem echo Certifying installer...
@@ -105,20 +107,27 @@ rem :PortableCert
 
 :rarCheck
 
+        echo.
+        echo ==== Portable file operations ====
     rem Check if project must be rarred...
         if %~1==GitUpdater goto rar
         if %~1==BasicBrowserGecko goto rar
 
     rem Delete previous portable executable, rename new one to portable
-        del "bin\Release\%1-Portable.exe"
-        ren "bin\Release\%1.exe" %1-Portable.exe
+    @echo on
+        del "bin\Release\%~1-Portable.exe"
+        ren "bin\Release\%~1.exe" %~1-Portable.exe
+    @echo off
         goto openOutputDir
 
 :rar
     %~dp0RAR-%~1.bat
 
 :openOutputDir
-    echo launching Explorer...
+    echo.
+    echo ==== Launching Explorer ====
+    @echo on
         explorer.exe "bin\Release"
+    @echo off
         timeout /t 5
 :EOF
