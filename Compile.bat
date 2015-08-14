@@ -45,19 +45,19 @@ echo Starting MSBuild compile for %~1...
         echo.
 
     rem If it doesn't fail, go to next step
-        if Not ERRORLEVEL==1 goto rarCheck rem AppCert
+        if Not ERRORLEVEL==1 goto InstallerCert
 
     echo MakeNSIS command failed, trying again in 32-bit program files folder...
         "%ProgramFiles(x86)%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
         echo.
 
-        if Not ERRORLEVEL==1 goto rarCheck rem AppCert
+        if Not ERRORLEVEL==1 goto InstallerCert
 
     echo MakeNSIS-32 command failed, trying again in 64-bit program files folder...
         "%ProgramW6432%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
         echo.
 
-        if Not ERRORLEVEL==1 goto rarCheck rem AppCert
+        if Not ERRORLEVEL==1 goto InstallerCert
 
     color 0C
         echo MakeNSIS Commands Failed!
@@ -69,18 +69,39 @@ echo Starting MSBuild compile for %~1...
         pause
         goto nsis
 
-:AppCert
+:InstallerCert
 
-    echo Certifying installer...
-        "%ProgramFiles%\Windows Kits\8.1\App Certification Kit\appcert.exe" test -setuppath "%~dp0..\%~1\bin\Release\%~1-Installer.exe" -reportoutputpath "%~dp0..\%~1\bin\Release\appcertreport.xml"
+    rem because you can't use a PVK (private key) via command line -_-
+        echo %~dp0..\%~1\bin\Release\%~1-Installer.exe
+        echo %~dp0WalkmanOSS.cer
+        echo %~dp0WalkmanOSS.pvk
+        echo https://github.com/Walkman100/%~1
+        echo http://timestamp.verisign.com/scripts/timstamp.dll
+    "%ProgramFiles%\Microsoft SDKs\Windows\v6.0A\Bin\signtool.exe" signwizard
+        echo %~dp0..\%~1\bin\Release\%~1.exe
+        echo %~dp0WalkmanOSS.cer
+        echo %~dp0WalkmanOSS.pvk
+        echo https://github.com/Walkman100/%~1
+        echo http://timestamp.verisign.com/scripts/timstamp.dll
+    "%ProgramFiles%\Microsoft SDKs\Windows\v6.0A\Bin\signtool.exe" signwizard
+        
+        
+    rem echo Certifying files...
+        rem echo Certifying installer...
+        rem "%ProgramFiles%\Microsoft SDKs\Windows\v6.0A\Bin\signtool.exe" sign /f %~dp0WalkmanOSS.cer /k %~dp0WalkmanOSS.pvk /du "https://github.com/Walkman100/%~1" /t "http://timestamp.verisign.com/scripts/timstamp.dll" "%~dp0..\%~1\bin\Release\%~1-Installer.exe"
+        rem if Not ERRORLEVEL==1 goto PortableCert
+        
+        rem echo Installer Certification failed!
 
-        if Not ERRORLEVEL==1 goto rarCheck
+rem :PortableCert
 
-    color 0C
-        echo Installer Certification failed!
-        echo Press enter to continue...
-        pause
-    color %defaultColor%
+        rem echo.
+        rem echo Certifying portable...
+        rem "%ProgramFiles%\Microsoft SDKs\Windows\v7.1A\Bin\signtool.exe" sign /f %~dp0WalkmanOSS.cer /k %~dp0WalkmanOSS.pvk /du "https://github.com/Walkman100/%~1" /t "http://timestamp.verisign.com/scripts/timstamp.dll" "%~dp0..\%~1\bin\Release\%~1.exe"
+        rem if Not ERRORLEVEL==1 goto rarCheck
+        
+        rem echo Portable Certification failed!
+        rem echo.
 
 :rarCheck
 
