@@ -12,7 +12,7 @@ rem Setting GUI elements and going to the project directory
     title Compiling %~1...
     cd ..\%~1
 
-echo ==== Starting MSBuild compile for %~1... ====
+echo ==== Starting MSBuild compile for %~1 ====
     rem Run the MSBuild command
         "%ProgramFiles%\MSBuild\12.0\bin\msbuild.exe" /property:Configuration=Release "%~1.sln"
 
