@@ -1,1 +1,1 @@
-[page has been moved](https://github.com/Walkman100/gists/blob/master/LinuxCompatability)
+[page has been moved](https://github.com/Walkman100/gists/blob/master/LinuxCompatability.md)
