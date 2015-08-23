@@ -38,12 +38,16 @@ Import [Sign Application.reg](https://github.com/Walkman100/WinCompile/blob/mast
 ### Using SignTool
 Once you have opened SignTool, follow these steps to sign the application:
 - Click <kbd>Next ></kbd>. If you have opened SignTool via the context menu or a script, the file to sign should be already filled in. If not, use <kbd>Browse...</kbd> to select it. Click <kbd>Next ></kbd>.
+
 [![SignFileSelect][SignFileSelect]][SignFileSelect]
 - Select `Custom`, then click <kbd>Next ></kbd>.
+
 [![SignTypeSelect][SignTypeSelect]][SignTypeSelect]
 - Click <kbd>Select from File...</kbd>(1), change the filter to `X.509 Certificate (*.cer;*.crt)`(2), open your certificate(3) then click <kbd>Next ></kbd>(4).
+
 [![SignCertSelect][SignCertSelect]][SignCertSelect]
 - Click <kbd>Browse...</kbd>(1), select your private key (generated [above](#generate-your-own-certificate))(2), click <kbd>Next ></kbd>(3), and enter your password for your private key(4).
+
 [![SignPVKSelect][SignPVKSelect]][SignPVKSelect]
 - Click <kbd>Next ></kbd> four times, then click <kbd>Finish</kbd> and enter your private key password again.
 
