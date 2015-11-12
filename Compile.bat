@@ -12,27 +12,35 @@ rem Setting GUI elements and going to the project directory
     title Compiling %~1...
     cd ..\%~1
 
+:msbuild
+
 echo ==== Starting MSBuild compile for %~1 ====
     rem Run the MSBuild command
-        "%ProgramFiles%\MSBuild\12.0\bin\msbuild.exe" /property:Configuration=Release "%~1.sln"
+        "%WinDir%\Microsoft.NET\Framework\v4.0.30319\msbuild.exe" /property:Configuration=Release "%~1.sln"
 
     rem If it doesn't fail, go to next step
         if Not ERRORLEVEL==1 goto nsis
 
-    echo MSBuild command failed, trying again in 32-bit program files folder...
-        "%ProgramFiles(x86)%\MSBuild\12.0\bin\msbuild.exe" /property:Configuration=Release "%~1.sln"
+    echo MSBuild command failed, trying again in v3.5...
+        "%WinDir%\Microsoft.NET\Framework\v3.5\msbuild.exe" /property:Configuration=Release "%~1.sln"
 
         if Not ERRORLEVEL==1 goto nsis
 
-    echo MSBuild-32 command failed, trying again in 64-bit program files folder...
-        "%ProgramW6432%\MSBuild\12.0\bin\msbuild.exe" /property:Configuration=Release "%~1.sln"
+    echo MSBuild_v3.5 command failed, trying again in v3.0...
+        "%WinDir%\Microsoft.NET\Framework\v3.0\msbuild.exe" /property:Configuration=Release "%~1.sln"
 
         if Not ERRORLEVEL==1 goto nsis
 
     color 0C
         echo ==== MSBuild Commands Failed! ====
+        echo.
+        echo Press enter to start installer...
         pause
-        goto eof
+        color %defaultColor%
+        %~dp0DotNetFramework4.6.exe
+    echo Installer launched, press enter to retry MSBuild commands...
+        pause
+        goto msbuild
 
 :nsis
 
