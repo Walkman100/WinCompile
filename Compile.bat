@@ -95,6 +95,12 @@ echo ==== Starting MSBuild compile for %~1 ====
         echo http://timestamp.verisign.com/scripts/timstamp.dll
     "%ProgramFiles%\Microsoft SDKs\Windows\v6.0A\Bin\signtool.exe" signwizard "%~dp0..\%~1\bin\Release\%~1-Installer.exe" "%~dp0..\%~1\bin\Release\%~1.exe"
         echo ==== Certificate signing process done ====
+        echo.
+        
+        if Not ERRORLEVEL==1 goto rarCheck
+        
+        echo ==== Certificate signing Failed ====
+        echo.
         
     rem echo Certifying files...
         rem echo Certifying installer...
