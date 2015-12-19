@@ -93,7 +93,7 @@ echo ==== Starting MSBuild compile for %~1 ====
         echo %~dp0WalkmanOSS.pvk
         echo https://github.com/Walkman100/%~1
         echo http://timestamp.verisign.com/scripts/timstamp.dll
-    "%ProgramFiles%\Microsoft SDKs\Windows\v6.0A\Bin\signtool.exe" signwizard "%~dp0..\%~1\bin\Release\%~1-Installer.exe" "%~dp0..\%~1\bin\Release\%~1.exe"
+    signtool signwizard "%~dp0..\%~1\bin\Release\%~1-Installer.exe" "%~dp0..\%~1\bin\Release\%~1.exe"
         echo ==== Certificate signing process done ====
         echo.
         
@@ -104,7 +104,7 @@ echo ==== Starting MSBuild compile for %~1 ====
         
     rem echo Certifying files...
         rem echo Certifying installer...
-        rem "%ProgramFiles%\Microsoft SDKs\Windows\v6.0A\Bin\signtool.exe" sign /f %~dp0WalkmanOSS.cer /k %~dp0WalkmanOSS.pvk /du "https://github.com/Walkman100/%~1" /t "http://timestamp.verisign.com/scripts/timstamp.dll" "%~dp0..\%~1\bin\Release\%~1-Installer.exe"
+        rem "%ProgramFiles%\Microsoft SDKs\Windows\v7.1A\Bin\signtool.exe" sign /f %~dp0WalkmanOSS.cer /k %~dp0WalkmanOSS.pvk /du "https://github.com/Walkman100/%~1" /t "http://timestamp.verisign.com/scripts/timstamp.dll" "%~dp0..\%~1\bin\Release\%~1-Installer.exe"
         rem if Not ERRORLEVEL==1 goto PortableCert
         
         rem echo Installer Certification failed!

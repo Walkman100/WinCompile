@@ -27,7 +27,7 @@ Signing is done by [SignTool](https://msdn.microsoft.com/en-us/library/aa387764.
 
 ### Starting SignTool
 #### Script
-See my [Compile Script@L75](https://github.com/Walkman100/WinCompile/blob/master/Compile.bat#L75).
+See my [Compile Script@L75](https://github.com/Walkman100/WinCompile/blob/master/Compile.bat#L96), it uses [signtool.exe](https://github.com/Walkman100/WinCompile/blob/master/signtool.exe) in this repo.
 
 #### Context menu
 [![Sign Context menu][SignContext]][SignContext]
