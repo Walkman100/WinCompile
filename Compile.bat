@@ -93,7 +93,7 @@ echo ==== Starting MSBuild compile for %~1 ====
         echo %~dp0WalkmanOSS.pvk
         echo https://github.com/Walkman100/%~1
         echo http://timestamp.verisign.com/scripts/timstamp.dll
-    signtool signwizard "%~dp0..\%~1\bin\Release\%~1-Installer.exe" "%~dp0..\%~1\bin\Release\%~1.exe"
+    %~dp0signtool signwizard "%~dp0..\%~1\bin\Release\%~1-Installer.exe" "%~dp0..\%~1\bin\Release\%~1.exe"
         echo ==== Certificate signing process done ====
         echo.
         
