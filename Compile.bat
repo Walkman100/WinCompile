@@ -17,17 +17,17 @@ rem Setting GUI elements and going to the project directory
     echo ==== Starting MSBuild compile for %~1 ====
     "%WinDir%\Microsoft.NET\Framework\v4.0.30319\msbuild.exe" /property:Configuration=Release "%~1.sln"
 
-if Not ERRORLEVEL==1 goto MSBuildDone
+if Not ERRORLEVEL==1 goto PortableCert
 
     echo MSBuild command failed, trying again in v3.5...
     "%WinDir%\Microsoft.NET\Framework\v3.5\msbuild.exe" /property:Configuration=Release "%~1.sln"
 
-if Not ERRORLEVEL==1 goto MSBuildDone
+if Not ERRORLEVEL==1 goto PortableCert
 
     echo MSBuild_v3.5 command failed, trying again in v3.0...
     "%WinDir%\Microsoft.NET\Framework\v3.0\msbuild.exe" /property:Configuration=Release "%~1.sln"
 
-if Not ERRORLEVEL==1 goto MSBuildDone
+if Not ERRORLEVEL==1 goto PortableCert
 
     color 0C
     echo ==== MSBuild Commands Failed! ====
@@ -41,11 +41,9 @@ if Not ERRORLEVEL==1 goto MSBuildDone
         echo.
         goto MSBuild
 
-:MSBuildDone
+:PortableCert
     echo ==== MSBuild Done ====
     echo.
-
-:PortableCert
     echo ==== Signing %~1.exe ====
         echo %~dp0WalkmanOSS.cer
         echo %~dp0WalkmanOSS.pvk
@@ -67,17 +65,17 @@ if Not ERRORLEVEL==1 goto PortableCertDone
     echo ==== Starting MakeNSIS Installer script for %~1 ====
     "%ProgramFiles%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
 
-if Not ERRORLEVEL==1 goto NSISdone
+if Not ERRORLEVEL==1 goto InstallerCert
 
     echo MakeNSIS command failed, trying again in 32-bit program files folder...
     "%ProgramFiles(x86)%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
 
-if Not ERRORLEVEL==1 goto NSISdone
+if Not ERRORLEVEL==1 goto InstallerCert
 
     echo MakeNSIS-32 command failed, trying again in 64-bit program files folder...
     "%ProgramW6432%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
 
-if Not ERRORLEVEL==1 goto NSISdone
+if Not ERRORLEVEL==1 goto InstallerCert
 
     color 0C
     echo ==== MakeNSIS Commands Failed! ====
@@ -91,12 +89,10 @@ if Not ERRORLEVEL==1 goto NSISdone
         echo.
         goto NSIS
 
-:NSISdone
+:InstallerCert
     echo ==== MakeNSIS Script done ====
     echo.
-
-:InstallerCert
-    echo ==== Starting Certificate signing process ====
+    echo ==== Signing %~1-Installer.exe ====
         echo %~dp0WalkmanOSS.cer
         echo %~dp0WalkmanOSS.pvk
         echo https://github.com/Walkman100/%~1
@@ -105,12 +101,12 @@ if Not ERRORLEVEL==1 goto NSISdone
 
 if Not ERRORLEVEL==1 goto InstallerCertDone
 
-    echo ==== Certificate signing Failed ====
+    echo ==== Signing %~1-Installer.exe Failed! ====
     echo.
         goto rarCheck
 
 :InstallerCertDone
-    echo ==== Certificate signing process done ====
+    echo ==== Signing %~1-Installer.exe done ====
     echo.
 
 :rarCheck
