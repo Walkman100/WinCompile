@@ -19,17 +19,17 @@ echo ==== Starting MSBuild compile for %~1 ====
         "%WinDir%\Microsoft.NET\Framework\v4.0.30319\msbuild.exe" /property:Configuration=Release "%~1.sln"
 
     rem If it doesn't fail, go to next step
-        if Not ERRORLEVEL==1 goto nsis
+        if Not ERRORLEVEL==1 goto PortableCert
 
     echo MSBuild command failed, trying again in v3.5...
         "%WinDir%\Microsoft.NET\Framework\v3.5\msbuild.exe" /property:Configuration=Release "%~1.sln"
 
-        if Not ERRORLEVEL==1 goto nsis
+        if Not ERRORLEVEL==1 goto PortableCert
 
     echo MSBuild_v3.5 command failed, trying again in v3.0...
         "%WinDir%\Microsoft.NET\Framework\v3.0\msbuild.exe" /property:Configuration=Release "%~1.sln"
 
-        if Not ERRORLEVEL==1 goto nsis
+        if Not ERRORLEVEL==1 goto PortableCert
 
     color 0C
         echo ==== MSBuild Commands Failed! ====
@@ -42,10 +42,28 @@ echo ==== Starting MSBuild compile for %~1 ====
         pause
         goto msbuild
 
-:nsis
+:PortableCert
 
     echo ==== MSBuild Done ====
     echo.
+    echo ==== Signing %~1.exe ====
+        echo %~dp0WalkmanOSS.cer
+        echo %~dp0WalkmanOSS.pvk
+        echo https://github.com/Walkman100/%~1
+        echo http://timestamp.verisign.com/scripts/timstamp.dll
+    %~dp0signtool signwizard "%~dp0..\%~1\bin\Release\%~1.exe"
+        
+if Not ERRORLEVEL==1 goto PortableCertDone
+        
+    echo ==== Signing %~1.exe Failed! ====
+        echo.
+        goto nsis
+
+:PortableCertDone
+    echo ==== Signing %~1.exe done ====
+    echo.
+    
+:nsis
     echo ==== Starting MakeNSIS Installer script for %~1 ====
     rem Run the MakeNSIS command
         "%ProgramFiles%\NSIS\makensis.exe" "NSIS Installer for %~1.nsi"
@@ -88,12 +106,7 @@ echo ==== Starting MSBuild compile for %~1 ====
         echo %~dp0WalkmanOSS.pvk
         echo https://github.com/Walkman100/%~1
         echo http://timestamp.verisign.com/scripts/timstamp.dll
-        echo.
-        echo %~dp0WalkmanOSS.cer
-        echo %~dp0WalkmanOSS.pvk
-        echo https://github.com/Walkman100/%~1
-        echo http://timestamp.verisign.com/scripts/timstamp.dll
-    %~dp0signtool signwizard "%~dp0..\%~1\bin\Release\%~1-Installer.exe" "%~dp0..\%~1\bin\Release\%~1.exe"
+    %~dp0signtool signwizard "%~dp0..\%~1\bin\Release\%~1-Installer.exe"
         echo ==== Certificate signing process done ====
         echo.
         
