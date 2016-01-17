@@ -7,7 +7,7 @@ See [CompileInstructions.md](https://github.com/Walkman100/gists/blob/master/Com
 
 # Certificates & Signing
 ## Importing a certificate
-- First you need to get the certificate file, either by creating your own one below, or downloading the one I use: [WalkmanOSS.cer](https://github.com/Walkman100/WinCompile/blob/master/WalkmanOSS.cer)
+- First you need to get the certificate file, either by creating your own one below, or downloading the one I use: [WalkmanOSS.cer](https://github.com/Walkman100/WinCompile/blob/master/WalkmanOSS.cer) ([download](https://github.com/Walkman100/WinCompile/raw/master/WalkmanOSS.cer))
 - Open the certificate and click the <kbd>Install Certificate...</kbd> button, then click <kbd>Next ></kbd>.
 [![CertificatePage][CertificatePage]][CertificatePage]
 - Select `Place all certificates in the following store` (1), then click <kbd>Browse...</kbd>(2).
