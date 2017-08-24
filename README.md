@@ -30,7 +30,9 @@ Signing is done by [SignTool](https://msdn.microsoft.com/en-us/library/aa387764.
 See my [Compile Script@L75](https://github.com/Walkman100/WinCompile/blob/master/Compile.bat#L96), it uses [signtool.exe](https://github.com/Walkman100/WinCompile/blob/master/signtool.exe) in this repo.
 
 #### Context menu
-[![Sign Context menu](http://walkman100.github.io/images/Screenshots/My_Projects/WinCompile/SignContext.png)](http://walkman100.github.io/images/Screenshots/My_Projects/WinCompile/SignContext.png)
+[![Sign Context menu][SignContext]][SignContext]
+
+  [SignContext]: http://walkman100.github.io/images/Screenshots/My_Projects/WinCompile/SignContext.png
 
 Import [Sign Application.reg](https://github.com/Walkman100/WinCompile/blob/master/Sign%20Application.reg) in this repo to get a sign item in the context menu for applications.
 
