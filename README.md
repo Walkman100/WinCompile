@@ -1,7 +1,7 @@
 # WinCompile
 Compile script for my Windows projects
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Walkman100/Walkman?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Walkman100/Walkman?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 See [CompileInstructions.md](https://github.com/Walkman100/gists/blob/master/CompileInstructions.md) and [LinuxCompatability.md](https://github.com/Walkman100/gists/blob/master/LinuxCompatability.md)
 
@@ -30,10 +30,9 @@ Signing is done by [SignTool](https://msdn.microsoft.com/en-us/library/aa387764.
 See my [Compile Script@L75](https://github.com/Walkman100/WinCompile/blob/master/Compile.bat#L96), it uses [signtool.exe](https://github.com/Walkman100/WinCompile/blob/master/signtool.exe) in this repo.
 
 #### Context menu
-[![Sign Context menu][SignContext]][SignContext]
-  [SignContext]: http://walkman100.github.io/images/Screenshots/My_Projects/WinCompile/SignContext.png
+[![Sign Context menu](http://walkman100.github.io/images/Screenshots/My_Projects/WinCompile/SignContext.png)](http://walkman100.github.io/images/Screenshots/My_Projects/WinCompile/SignContext.png)
 
-Import [Sign Application.reg](https://github.com/Walkman100/WinCompile/blob/master/Sign Application.reg) in this repo to get a sign item in the context menu for applications.
+Import [Sign Application.reg](https://github.com/Walkman100/WinCompile/blob/master/Sign%20Application.reg) in this repo to get a sign item in the context menu for applications.
 
 ### Using SignTool
 Once you have opened SignTool, follow these steps to sign the application:
