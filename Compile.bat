@@ -103,17 +103,17 @@ if Not ERRORLEVEL==1 goto InstallerCertDone
 
     echo ==== Signing %~1-Installer.exe Failed! ====
     echo.
-        goto rarCheck
+        goto zipCheck
 
 :InstallerCertDone
     echo ==== Signing %~1-Installer.exe done ====
     echo.
 
-:rarCheck
+:zipCheck
     echo ==== Portable file operations ====
-    rem Check if project must be rarred...
-        if %~1==GitUpdater goto rar
-        if %~1==BasicBrowserGecko goto rar
+    rem Check if project must be zipped...
+        if %~1==GitUpdater goto zip
+        if %~1==BasicBrowserGecko goto zip
 
     rem Delete previous portable executable, rename new one to portable
     @echo on
@@ -122,8 +122,8 @@ if Not ERRORLEVEL==1 goto InstallerCertDone
     @echo off
         goto openOutputDir
 
-:rar
-    %~dp0RAR-%~1.bat
+:zip
+    %~dp0ZIP-%~1.bat
 
 :openOutputDir
     echo.
