@@ -13,6 +13,9 @@ rem Setting GUI elements and going to the project directory
     title Compiling %~1...
     cd ..\%~1
 
+:SubmoduleInit
+    git submodule update --init --recursive
+
 :MSBuild
     echo ==== Starting MSBuild compile for %~1 ====
     "%WinDir%\Microsoft.NET\Framework\v4.0.30319\msbuild.exe" /property:Configuration=Release "%~1.sln"
