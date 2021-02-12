@@ -86,7 +86,7 @@ if Not ERRORLEVEL==1 goto InstallerCert
         echo Press enter to start installer...
         pause
         color %defaultColor%
-    %~dp0NSIS-3.03-setup.exe
+    %~dp0NSIS-3.06.1-setup.exe
         echo Installer launched, press enter to retry MakeNSIS commands...
         pause
         echo.
