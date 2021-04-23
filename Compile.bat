@@ -51,7 +51,7 @@ if Not ERRORLEVEL==1 goto PortableCert
         echo %~dp0WalkmanOSS.cer
         echo %~dp0WalkmanOSS.pvk
         echo https://github.com/Walkman100/%~1
-        echo http://timestamp.verisign.com/scripts/timstamp.dll
+        echo http://timestamp.comodoca.com/authenticode
     %~dp0signtool signwizard "%~dp0..\%~1\bin\Release\%~1.exe"
 
 if Not ERRORLEVEL==1 goto PortableCertDone
@@ -99,7 +99,7 @@ if Not ERRORLEVEL==1 goto InstallerCert
         echo %~dp0WalkmanOSS.cer
         echo %~dp0WalkmanOSS.pvk
         echo https://github.com/Walkman100/%~1
-        echo http://timestamp.verisign.com/scripts/timstamp.dll
+        echo http://timestamp.comodoca.com/authenticode
     %~dp0signtool signwizard "%~dp0..\%~1\bin\Release\%~1-Installer.exe"
 
 if Not ERRORLEVEL==1 goto InstallerCertDone
